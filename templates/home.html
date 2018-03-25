@@ -1,0 +1,36 @@
+{% extends "navbar.html" %}
+{% block content %}
+<title>MedRec</title>
+<section class="hero is-primary is-bold is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="settings" class="legbox">
+          <h1 class="title">Public Transactions</h1>
+            <table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="From">From</abbr></th>
+      <th><abbr title="To">To</abbr></th>
+      <th><abbr title="Hash">Hash</abbr></th>
+      <th><abbr title="PreviousHash">Previous Hash</abbr></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th><abbr title="From">From</abbr></th>
+      <th><abbr title="To">To</abbr></th>
+      <th><abbr title="Hash">Hash</abbr></th>
+      <th><abbr title="PreviousHash">Previous Hash</abbr></th>
+    </tr>
+  </tfoot>
+  <tbody></tbody>
+</table>
+          <br></tr>
+          <br>
+          <br>
+          <i><a id="feedback" class="feedback"></a></i>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "navbar.html" %}
+{% block content %}
+<title>MedRec</title>
+<head>
+    <meta charset="utf-8">
+    <title>Flask upload with Dropzone example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dropzone.css') }}">
+</head>
+<section class="hero is-primary is-bold is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+        <div id="dropboxarea"  class="upload-area">
+      <div id="settings" class="settings-box">
+        <div class="settings-area">
+          <h1 class="title">Choose Your Files:</h1>
+          <div class="field">
+            <p class="control has-icons-left">
+            </p>
+          </div>
+          <i><a id="feedback" class="feedback"></a></i>
+        </div>
+      </div>
+            <body id="dropbox" class="box is-primary">
+    <form action="{{ url_for('upload')}}" class="dropzone" method="POST" enctype="multipart/form-data">
+    </form>
+    <script src="{{ url_for('static', filename='dropzone.js') }}"></script>
+            </body>
+        <a href="/" class="form-button button is-primary is-inverted is-outlined">
+            <span>Send</span>
+          </a>
+        </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

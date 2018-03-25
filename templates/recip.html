@@ -1,0 +1,31 @@
+{% extends "navbar.html" %}
+{% block content %}    
+<title>MedRec</title>
+<section class="hero is-primary is-bold is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="settings" class="settings-box">
+        <div class="settings-area">    
+          <h1 class="title">Enter your Recipient's Username</h1>
+          <div class="field">
+            <p class="control has-icons-left">
+            <form action="{{ url_for('recip')}}", method="POST">
+              <input name="recip" id="recip" class="input" type="text" placeholder="Recipient Username">
+            <a href="/upload" class="form-button button is-primary is-inverted is-outlined">
+            <span><input type="submit" ></span>
+          </a>
+              <span class="icon is-small is-left">
+                <i class="fa fa-lock"></i>
+              </span>
+          </form>
+            </p>
+          </div>
+          <br>
+          <br>
+          <i><a id="feedback" class="feedback"></a></i>
+        </div>
+      </div>    
+    </div>
+  </div>
+</section>
+{% endblock %}
